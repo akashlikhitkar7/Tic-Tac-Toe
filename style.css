@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    background: #24090e;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+}
+nav li{
+    list-style: none;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 3px 5px;
+
+}
+.container{
+    display: grid;
+    grid-template-rows:repeat(3,10vw);
+    grid-template-columns:repeat(3,10vw);
+    position: relative;
+    
+}
+
+.box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: rgb(212, 206, 206);
+}
+.line{
+    background-color: black;
+    position: absolute;
+    background-color: purple;
+    transition: width 1s ease-in-out;
+}
+.lineThrou{
+    text-decoration: line-through;
+}
+
+.boxtext{
+
+    font-size: 75px;
+}
+.img img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+button{
+    display: block;
+    background-color: #ff0c0c;
+    color: wheat;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.br-0{
+    border-right: 0;
+}
+.gameinfo{
+    margin: 10px;
+    padding: 2px;
+}
+
+@media screen and (max-width: 800px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameContainer{
+       
+        display: block;
+    }
+    .gameinfo{
+        margin-top: 19px;
+    }
+    .gameinfo h1{
+        font-size: 16px;
+    }
+    .img img{
+        width: 50;
+    }
+    .gameContainer {
+        width: 80vw;
+        margin: auto;
+        padding: 3px 5px;
+    }
+    .boxtext{
+
+        font-size: 41px;
+    }
+}
